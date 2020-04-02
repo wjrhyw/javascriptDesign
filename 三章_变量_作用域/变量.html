@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a={name:'wjr',age:23};
+        var b=a;
+        
+        // console.log(a,b);
+    
+        // b.name='hyw';
+        // console.log(a,b);
+
+        function test(obj){
+            let res=obj;
+            res.name='hyw'
+        }
+
+        test(a);
+        console.log(a,b);
+    </script>
+</body>
+</html>

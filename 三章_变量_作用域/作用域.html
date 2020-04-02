@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var a=100;
+        // function test(){
+        //     var a=200;
+        //     var b=300;
+        //  return function x(){
+        //         console.log('a的值是',a);
+        //     }
+        // }
+        // var fn=test();
+        // fn();
+        
+        // var a=100;
+        // function test(fn){
+        //     var a=200;
+        //     fn();
+        // }
+        // function fn(){
+        //     console.log('a的值',a);
+        // }
+        // test(fn);
+
+        // function test(){
+        //     var a=200;
+        //     (function(){
+        //         console.log('a的值',a);
+        //     })()
+        // }
+        // test();
+
+        function test(){
+            var a=200;
+            function x(){
+                console.log('a的值',a);
+            }
+            x();
+        }
+        test();
+    </script>
+</body>
+</html>
