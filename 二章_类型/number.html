@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log('NaN是数值类型中的一个特殊值，typeof同样会返回number',typeof NaN);
+        console.log('NaN不会和任何类型相等，包括自己',NaN===NaN,NaN==NaN,NaN==1);
+        var x='s',y='',z=true,h={};
+        console.log('isNaN函数来检测某一个变量是否可以被转换为数字',isNaN(x),isNaN(y),isNaN(z),isNaN(h));
+        // 当前的变量能够返回数值，就返回false；否则就返回true;
+        // 简单实现Number转换函数
+        function Number1(x){
+            if(typeof x==='number'){
+                return x;
+            }
+            if(typeof x==='string'){
+                let arr=x.split();
+                if(arr.some((item)=>isNaN(item))){ return NaN};
+                if(x===''){return 0}
+                return x;
+            }
+            if(typeof x==='boolean'){
+                if(x===true){
+                    return 1
+                }else{
+                    return 0
+                }
+            }
+            if(typeof x===undefined){
+                return NaN
+            }
+            if(typeof x===null){
+                return NaN
+            }
+        }
+        console.log(Number1(''));
+
+        console.log(parseInt('-23x2xa ',10));
+
+        console.log(parseFloat('-c.33dds3'));
+    </script>
+</body>
+</html>

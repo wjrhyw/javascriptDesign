@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a;
+        console.log('a只是被定义，但没有初始化',a);
+        // var b
+        // console.log('b没有被定义，会抛错',b);
+        console.log('typeof检测未被定义的变量时，会返回undefined--',typeof b);
+        console.log('typeof检测未初始化的变量时，也会返回undefied--',typeof a);
+        console.log('undefiend派生自null，所以==时，会返回true',undefined==null);
+        console.log('undefied类型只有一个值，undefied，所以不管是两等还是三等，都返回true',undefined==undefined,undefined===undefined);
+    </script>
+</body>
+</html>

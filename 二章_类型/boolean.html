@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log('任何类型的值都可以被转为boolean类型，通过Boolean函数');
+        var a=1,b=0;c=-0,x=NaN;
+        console.log('数值类型转为boolean',Boolean(a),Boolean(b),Boolean(c),Boolean(x));
+        // 总结：数值类型，除了0，-0，NaN转为false，其余转为true
+        var d='ss',e='';
+        console.log('字符串类型转为boolean',Boolean(d),Boolean(e));
+        // 总结：字符换类型转为boolean，空字符串转为false，其余转为true
+        var f=true,g=false;
+        console.log('boolean类型转为boolean',Boolean(f),Boolean(g));
+        // 总结：单纯的返回true,false
+        var h;
+        console.log('undefined类型转为boolean',Boolean(h))
+        // 总结：undefined类型转为false
+        var i=null;
+        console.log('null类型转为boolean',Boolean(i));
+        // 总结：null类型转为false
+        var arr=[1,2,3];
+        console.log('Array类型转为boolean',Boolean(arr));
+         function test(){}
+         console.log('Funtion类型转为boolean',Boolean(test));
+         var obj={}
+         console.log('Object类型转为boolean',Boolean(obj));
+        //  总结：object类型全部都转换为true
+    </script>
+</body>
+</html>
