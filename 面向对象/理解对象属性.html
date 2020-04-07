@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj={
+            _name:'wjr',
+            age:23
+        }
+  
+        Object.defineProperty(obj,'name',{
+            get:function(){
+                return this._name
+            },
+            set:function(val){
+                this._name=val
+            }
+        });
+
+        console.log('对象',obj._name);
+
+       console.log('获取对象属性的特性', Object.getOwnPropertyDescriptor(obj,'_name'));
+    //   修改属性writer特性
+    Object.defineProperty(obj,'_name',{
+        writable:false
+    });
+    console.log('_name属性的值',obj._name);
+    obj._name='hyw';
+    console.log('_name属性的值',obj._name);
+    // 修改属性value特性
+    Object.defineProperty(obj,'_name',{
+        writable:true,
+        value:'hyw'
+    });
+    console.log('_name属性的值',obj._name);
+    // 修改可循环属性
+    Object.defineProperty(obj,'_name',{
+        enumerable:false
+    });
+    for(var item in obj){
+        console.log('是否可遍历',item);
+    }
+    // 修改是否可删除以及是否可定义特性
+    Object.defineProperty(obj,'_name',{
+        configurable:false
+    });
+    delete obj._name;
+    console.log('是否删除',obj._name);
+    </script>
+</body>
+</html>
